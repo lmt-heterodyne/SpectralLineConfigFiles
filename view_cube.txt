@@ -1,0 +1,25 @@
+
+#lmtslr general items
+[general]
+# input path for scan files
+input = ./85925.fits
+
+[spectra]
+# velocity range in km/s for integrated intensity
+v_range = -300.0, 200.0
+# scale factor for velocity (default 1/1000 to convert m/s to km/s
+v_scale = 0.001
+# offset in arcsec for spectrum
+location = 0.0, 0.0
+# scale factor for positional offset (default 1/3600 for arcsec to deg)
+scale = 0.000278
+# xy limits for final map 
+limits = -100.0, 100.0, -100.0, 100.0
+# data range for tmax image
+tmax_range = -1.0, 1.0
+# data range for tint image
+tint_range = -1.0, 1.0
+# data to plot. one of TINT or TMAX
+plot_type = TINT
+# interpolation to use. 
+interpolation = bilinear

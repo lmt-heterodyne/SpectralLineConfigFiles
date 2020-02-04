@@ -6,7 +6,7 @@ path = /data_lmt
 output = ./output.nc
 # If reducing single Obsnum, the integer Observation number
 obsnum = 85886
-# comma separated list when there is a list of ObsNums to process
+# when there is a list of ObsNums to process
 obs_list = 85886,
 
 [spectra]
@@ -14,15 +14,19 @@ obs_list = 85886,
 bank = 0
 # list of pixels to process
 pix_list = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
+# channels to eliminate
+eliminate_list = 4096,
 # If use_cal is True find and use the calibration scan
 use_cal = False
 # if use_cal is False use this Tsys
 tsys = 200.0
+# select spectral x axis
+x_axis = VLSR
 # baseline order
 b_order = 0
 # list of lists for baselines
-b_regions = '[[-193, -93], [107,207]]'
+b_regions = "[[-193, -93], [107,207]]"
 # list of lists for line fit regions
-l_regions = '[[-93, 107]]'
+l_regions = "[[-93, 107]]"
 # list to specify slice from spectrum for processing
-slice = -193, 207
+slice = -200.0, 200.0
